@@ -1,0 +1,45 @@
+/** Introduction **/
+C++ was developed by "Bjarne Stroustrup" in 1985 is extesion of C language.
+
+/** Variable **/
+Variable are used to store data.
+A variable in C++ is a named memory location (or container) that can store a value which can change during program execution.
+    - If the value can change, it's a regular variable.
+    - If the value must not change, we use the const keyword, making it a constant.
+
+/** Data Type **/
+A data type in C++ determines the kind of value a variable can store, such as integers, characters, floating-point numbers, etc.
+    - How much memory to allocate
+    - What kind of operations are allowed
+    - What kind of values the variable can hold
+    1. int 4 Byte
+    2. float 4 Byte
+    3. double 8 Byte  
+    4. char 1 Byte
+    5. string if 'Krishna' then 32 Byte
+    6. bool 1 Byte
+    
+Note: When work with char[] extra 1 byte used for the null terminator (\0).
+Note: "Krishna" has 7 letters, but string object may take 24, 32, or more bytes.
+
+/** Type Casting **/
+Type Casting means converting a variable from one data type to another.
+Two Types in C++: (→ Implication Symbol & ⇔ Birectional Symbol)
+1. Type Coercion/Conversion/Implicit (Automatic) is usually used to Low Data Type → High Data Type
+2. Type Casting/Explicit (Manual) is usually used to Low Data Type ← High Data Type  
+
+/** Input/Output Object **/
+cout << is used to display output on the screen.
+cin >> is used to take input from the user through the keyboard.
+
+/** Operators **/
+An operator is a symbol/keyword that performs a specific operation on one or more operands (values or variables).
+1. Arithmatic : To perform some mathematical operation.
+2. Relational : To find the relation between two situation and return something in the form of "true" or "false". 
+3. Logical : Perform beteen between two relation the give return something in the form of "true" or "false".
+4. Unary : Unary operator always has single or one operands.
+
+/** Conditional Statement**/
+A "Condtional Statement" is a way to make decisions in a program - it allows the program to choose different action based on whether a condition is "true" or "false".
+1. if, if-else, if-else if-else
+
