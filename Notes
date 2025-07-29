@@ -36,7 +36,7 @@ cin >> is used to take input from the user through the keyboard.
 An operator is a symbol/keyword that performs a specific operation on one or more operands (values or variables).
 1. Arithmatic : To perform some mathematical operation.
 2. Relational : To find the relation between two situation and return something in the form of "true" or "false". 
-3. Logical : Perform beteen between two relation the give return something in the form of "true" or "false".
+3. Logical : Perform between two relation the give return something in the form of "true" or "false".
 4. Unary : Unary operator always has single or one operands.
 
 /** Conditional Statement**/
