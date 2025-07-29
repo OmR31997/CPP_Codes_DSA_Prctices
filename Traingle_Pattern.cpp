@@ -140,6 +140,113 @@ int main()
     //     ch++;
     // }
 
+    //-----------------------------------------------
+    /* *Isosceles/Pyramid Triangle* */
+    // for(int i=0; i<nTimes; i++)
+    // {
+    //     for(int j=0; j<nTimes-1-i; j++)
+    //     {
+    //         cout <<" ";
+    //     }
+        
+    //     for(int k=0; k<i+1; k++)
+    //     {
+    //         cout <<k+1;
+    //     }
+        
+    //     for(int l=i; l>0; l--)
+    //     {
+    //         cout <<l;
+    //     }
+        
+    //     cout <<"\n";
+    // }
+
+    /* *Hollow Diamond* */    
+    // Top
+    // for(int i=0; i<nTimes; i++)
+    // {
+    //     for(int j=0; j<nTimes-i-1; j++)
+    //     {
+    //         cout <<" ";
+    //     }
+        
+    //     cout <<"*";
+        
+    //     if(i != 0)
+    //     {
+    //         for(int k=0; k<2*i-1; k++)
+    //         {
+    //             cout <<" ";
+    //         }
+    //         cout <<"*";
+    //     }
+    //     cout <<'\n';
+    // }
+    
+    // Bottom
+    // for(int i=0; i<nTimes-1; i++)
+    // {
+    //     for(int j=0; j<i+1; j++)
+    //     {
+    //         cout <<" ";
+    //     }
+        
+    //     cout <<"*";
+        
+    //     if(i != nTimes-2)
+    //     {
+    //         // for(int k=0; k<2*(nTimes-i)-5; k++)
+    //         for(int k=0; k<2*(nTimes-i-2)-1; k++)
+    //         {
+    //             cout <<" ";
+    //         }
+    //         cout <<"*";
+    //     }
+    //     cout <<'\n';
+    // }
+    
+    /* *Butter Fly* */
+    //Top
+    // for(int i=0; i<nTimes; i++)
+    // {
+    //     for(int j=0; j<i+1; j++)
+    //     {
+    //         cout <<"*";
+    //     }
+        
+    //     for(int k=0; k<2*(nTimes-i-1);k++)
+    //     {
+    //         cout <<" ";
+    //     }
+        
+    //     for(int l=0; l<i+1; l++)
+    //     {
+    //         cout <<"*";
+    //     }
+    //     cout <<"\n";
+    // }
+    
+    // //Bottom
+    // for(int i=0; i<nTimes; i++)
+    // {
+    //     for(int j=0; j<nTimes-i; j++)
+    //     {
+    //         cout <<"*";
+    //     }
+        
+    //     for(int k=0; k<2*(i);k++)
+    //     {
+    //         cout <<" ";
+    //     }
+        
+    //     for(int l=0; l<nTimes-i; l++)
+    //     {
+    //         cout <<"*";
+    //     }
+    //     cout <<"\n";
+    // }
+
     
     return 0;
 }
