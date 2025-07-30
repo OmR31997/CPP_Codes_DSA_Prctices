@@ -43,3 +43,97 @@ An operator is a symbol/keyword that performs a specific operation on one or mor
 A "Condtional Statement" is a way to make decisions in a program - it allows the program to choose different action based on whether a condition is "true" or "false".
 1. if, if-else, if-else if-else
 
+/** Function **/
+A funtion is s reusable block of code that perform a specific task and function provides:
+    1. Reusability 
+    2. Modularity (Agile)
+    3. Scalability (Scale Upgrading)
+    4. Readability
+    5. Reduces Redundancy (Unecessary Repetion Line Of Codes)
+
+    There have two things
+    0. Literal: A literal is a value that cannot be changed. It remains the same across languages like Java, C#, and C++.
+                Example: int a = 10; // 10 is an integer literal
+                         float pi = 3.14; // 3.14 is a float literal
+                         char ch = 'A'; // 'A' is a char literal
+                         string name = "OM"; // "OM" is a string literal
+                         sum(21, 20); //Calling time
+    1. Arguments: They are the actual values pass to the function and is also called literals.
+    2. Parameters: Parameter is nothing but that copy of the argument.
+
+void main(): Main function returns nothing.
+int main(): Main function returns an integer (status).
+
+/** Function In Memory **/
+In C++, There have types of memory
+1. Stack Memory (Static Memory Allocation)
+2. Heep Memory (Dynamic Memory Allocation)
+
+|        |
+----------
+|        |
+----------
+|        |
+----------
+|  main  |    Stack Frame
+----------
+Call Stack
+
+Stack Memory in C/C++ (and most languages with a call stack):
+When a C/C++ program starts, the main() function is automatically called by the compiler/runtime system.
+This causes a stack frame to be created in stack memory, which stores:
+ - Local variables of main()
+ - Return address
+ - Function parameters (if any)
+
+Function Call Behavior:
+1. When main() calls another function (e.g., func1()), a new stack frame is created on top of the previous one.
+2. If func1() calls another function (e.g., func2()), another frame is pushed on top of that.
+3. This continues for each function call.
+4. When a function returns, its stack frame is popped (removed) from the stack, and control goes back to the previous function.
+5. This process continues until the program ends.
+
+Example
+-----------------------------------------------------------------
+void func2() {
+    int z = 30;
+    // func2's stack frame created
+}
+
+void func1() {
+    int y = 20;
+    func2();  // func2's frame goes on top
+    // func2's frame gets popped after return
+}
+
+int main() {
+    int x = 10;
+    func1();  // func1's frame goes on top of main
+    return 0;
+}
+-----------------------------------------------------------------
+
+/** Pass By Value **/
+In pass by value, a copy of the actual argument is passed to the function.
+When a primitive type variable (like int, float, char) is passed, the function receives a copy, so the original variable remains 
+unchanged even if the function modifies it.
+
+----------------------------------------------------------------
+#include <stdio.h>
+
+void update(int num) {
+    num = num + 10;  // Changes only the copy
+    printf("Inside function: %d\n", num);
+}
+
+int main() {
+    int x = 5;
+    update(x);
+    printf("Outside function: %d\n", x);  // x is still 5
+    return 0;
+}
+----------------------------------------------------------------
+
+
+
+
