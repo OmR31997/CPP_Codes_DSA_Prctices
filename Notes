@@ -134,6 +134,167 @@ int main() {
 }
 ----------------------------------------------------------------
 
+/** Number System**/
+A number system is a way to represent and express numbers using a set of symbols (digits) and
+a base (radix). In data structures, it's essential for encoding data and performing operations 
+in binary, decimal, octal, or hexadecimal formats.
 
+A Number System in data structures refers to the method of representing numbers using different
+bases (radices). Since computers operate using electrical signals (ON/OFF), they fundamentally 
+use binary (base-2), but humans commonly use decimal (base-10). Understanding number systems is critical in data structures for:
+1. Data Representation – How data (integers, characters, etc.) is stored in memory.
+2. Memory Addressing – Hexadecimal is often used to represent memory locations.
+3. Bit-level Operations – Many data structures (like bit arrays, tries, bloom filters) rely on binary operations.
+🧮 Common Number Systems:
+| Name            | Base | Digits Used | Example             |
+| --------------- | ---- | ----------- | ------------------- |
+| Binary          | 2    | 0, 1        | 1010 (binary of 10) |
+| Decimal         | 10   | 0–9         | 123                 |
+| Octal           | 8    | 0–7         | 17 (octal of 15)    |
+| Hexadecimal     | 16   | 0–9, A–F    | 1F (hex of 31)      |
 
+Example Use in Data Structures:
+- Binary Trees use binary numbers for traversal.
+- Bit Manipulation helps in optimizing space in structures like hash maps.
+- Hex used in memory dumps and debugging tools.
 
+Note: Each and evey digital electronic device understand only binary system.
+
+/** Biwise Operators**/
+A Bitwise Operator is a type of operator that works on the binary representation of integers. 
+Although it appears to operate on decimal numbers, the actual operation is performed at the binary (bit) level.
+
+1. Bitwise AND(&)
+Ex: 2&3
+    2: 10
+    3: 11
+    -----=10 which is in decimal 2
+
+2. Bitwise OR(|)
+Ex: 8&4
+    8: 1000
+    4: 0100
+    ------=1100 which is in decimal 12
+
+3. Bitwise LEFT_SHIFT(<<)
+Ex: 
+    3<<2: a*2^b 
+    3: 11
+     1100: 12
+
+4. Bitwise RIGHT_SHIFT(>>)
+Ex: 
+    3<<1: a/2^b
+    3: 11
+       01:1
+
+5. Bitwise XOR(^)
+Ex:
+    4^2: 
+    100
+    010
+    --110 which is in decimal 6
+
+/** Operator Precendence **
+| Operators       | Precendence | Associative Order   |
+| --------------- | ----------- | ------------------- |
+| !, +, - (Unary) | First       | R-L                 |
+| *, /, %         | Second      | L-R                 | 
+| +, -            | Third       | L-R                 | 
+| Bitwise         |             |                     |
+| <, <=, >=, >    | Fourth      | L-R                 |
+| ==, !=          | Fift        | L-R                 | 
+| &&              | Sixth       | L-R                 |
+| ||              | Seventh     | L-R                 |
+| =               | Last        | R-L                 |     
+Note: Our Point Of View Based Direction
+
+/** Scope **/
+Scope in programming refers to the region or context within a program where a variable is defined and can be accessed or used.
+Variable Types
+1. Local Scope Variable: Variable is accessible only within the block/function it was declared.
+2. Block Scope Variable: Variable is accessible only in { } block.
+3. Global Scope Variable: Variable is accessible anywhere in the program.
+4. Function Scope Variable: Variables declared inside a function, accessible only within that function.
+4. Instance Scope Variable: In JavaScript with Class, An instance variable is a variable that belongs to an object (instance) created from a class.
+Each object has its own copy of instance variables.
+
+/** Data Type Modifier **/
+In programming, a data type modifier changes the meaning or behavior of a basic data type.
+
+For example, an `int` in C/C++ usually uses 4 bytes = 32 bits. Each bit can be 0 or 1.
+So total values = 2^32.
+
+But in a **signed int**, the first bit (MSB) is used to represent the sign:
+- 0 means positive
+- 1 means negative
+
+So:
+- Max positive = (2^31) - 1 = 2,147,483,647
+- Min negative = -2^31 = -2,147,483,648
+
+If we need a number bigger than 2^31 - 1, we can use:
+- `unsigned int` → removes negative range, gives 0 to 2^32 - 1
+- `long` or `long long` → increases range up to 2^64 (in 64-bit systems)
+
+1. long
+2. short
+3. long long
+4. signed
+5. unsigned
+
+/** Data Structure **/
+A Data  Structure is way to store and organize data in memory in a structured and optimized manner.
+In other word we can say, A data structure is a specialized format for organizing, processing, and storing data in a way that enables 
+efficient access and modification. 
+
+Examples: arrays, linked lists, stacks, queues, trees, and graphs.
+
+/** Array Syntax **/
+An array is a type of non-primitive data structure used to store multiple values of the same data type in contiguous, linear, and
+organized manner.
+Array Architecture Visualization
++--------+--------+--------+--------+--------+
+|  10    |  20    |  30    |  40    |  50    |
++--------+--------+--------+--------+--------+
+   ↑        ↑        ↑        ↑        ↑
+ Index 0  Index 1  Index 2  Index 3  Index 4
+
+| Part                  | What It Means                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------  |
+| Array Elements        | The actual values stored (like `10`, `20`, etc.)                                                  |
+| Index                 | Position of an element in the array (starts from `0`)                                             |
+| Base Address          | Memory address of the first element (not shown here, but exists internally like: 1004, 1008, ...) |
+| Contiguous Memory     | All elements are stored **one after another in memory** (no gaps)                                 |
+
+Declartion: -
+int arr[] = {elem_1, elem_2, elem_2,.....elem_n};
+int arr[5]; //after assigning
+
+Assigning Values in Array
+arr[1] = 25, arr[2] = 20
+
+Note: An array has a fixed size, so we must ensure that values are stored only within valid index positions (0 to length − 1). 
+Accessing or storing values outside this range may lead to undefined behavior or garbage values. 
+
+/** Loops on Array **/
+
+To Read Array Variable
+ int arr[] = {25, 20, 29, 30, 36}; 
+ int size = sizeof(arr)/sizeof(int);
+ for(int i=0; i<size; i++)
+ {
+   cout <<arr[i];   
+ }
+
+To Assign Values Into Array
+ int size = 5;
+ int arr[size];
+ for(int i=0; i<size; i++)
+ {
+   cin >>arr[i];
+ }
+
+/** Pass By Reference(Address, Actual value change) **/
+
+/** Linear Search **/
